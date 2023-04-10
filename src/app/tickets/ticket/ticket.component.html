@@ -1,11 +1,27 @@
 <div class="card ticket" (click)="selectTicket()">
   <!-- we use the {{ }} syntax to display the data, more info: https://angular.io/guide/displaying-data-->
 
-  <h3>{{ticket.title}}</h3>
+  <h3>Titre: {{ticket.title}}</h3>
   <i class="fas fa-calendar-alt"></i> {{ticket.date | date: 'shortTime'}} &nbsp;&nbsp;
-  <i class="far fa-user"></i> {{ticket.author}}
+  <i class="far fa-user"></i> {{ticket.student}}
   <div>
-    Major: {{ticket.major}}
+    <div [ngSwitch]="ticket.major">
+      <div *ngSwitchCase="'si'">
+        <i class="fas fa-spinner fa-spin"></i>
+        Major: {{ticket.major}}
+      </div>
+      <div *ngSwitchCase="'ge'">
+        <i class="fas fa-sync-alt fa-spin"></i>
+        Major: {{ticket.major}}
+      </div>
+      <div *ngSwitchCase="'gb'">
+        <i class="fas fa-cog fa-spin"></i>
+        Major: {{ticket.major}}
+      </div>
+      <div *ngSwitchDefault>
+        Warning! major value is empty.
+      </div>
+    </div>
   </div>
 
   </div>
