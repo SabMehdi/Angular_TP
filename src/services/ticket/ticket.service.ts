@@ -29,4 +29,10 @@ export class TicketService {
     this.ticketList.push(ticket)
     this.tickets$.next(this.ticketList)
   }
+
+  deleteTicket(ticket:Ticket){
+    this.ticketList.splice(this.ticketList.indexOf(ticket),1)
+    this.tickets$.next(this.ticketList)
+  }
+
 }

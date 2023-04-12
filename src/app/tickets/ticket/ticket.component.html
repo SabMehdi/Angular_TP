@@ -19,9 +19,9 @@
         Major: {{ticket.major}}
       </div>
       <div *ngSwitchDefault>
-        Warning! major value is empty.
+        Warning! major value is empty or invalid.
       </div>
     </div>
   </div>
-
+  <button (click)="deleteTicket()">Delete</button>
   </div>
