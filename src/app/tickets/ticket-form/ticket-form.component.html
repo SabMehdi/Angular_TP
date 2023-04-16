@@ -12,18 +12,10 @@
   <br>
   <label for="major">
     Major <br>
-    <select name="majors" id="major-select">
-      <option value="">--Please choose an option--</option>
-      <option value="gb">gb</option>
-      <option value="ge">ge</option>
-      <option value="si">si</option>
-      
-  </select> 
-   
+    <select name="majors" id="major-select" formControlName="major">
+      <option *ngFor="let major of majors" [value]="major.value">{{major.label}}</option>
+    </select>
   </label>
   <br>
   <button type="submit" class="btn-custom" (click)="addTicket()">Create</button>
 </form>
-
-<!-- Uncomment below to see your form structure and how it changes-->
-<!--<br><br>{{ticketForm.getRawValue() | json}}-->

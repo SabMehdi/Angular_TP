@@ -10,24 +10,20 @@ import { Ticket } from '../../../models/ticket';
 })
 export class TicketFormComponent implements OnInit {
 
-  // Note: We are using here ReactiveForms to create our form. Be careful when you look for some documentation to
-  // avoid TemplateDrivenForm (another type of form)
-  /**
-   * TicketForm: Object which manages the form in our component.
-   * More information about Reactive Forms: https://angular.io/guide/reactive-forms
-   */
   public ticketForm: FormGroup;
+  public majors = [
+    { value: '', label: '--Please choose an option--' },
+    { value: 'gb', label: 'gb' },
+    { value: 'ge', label: 'ge' },
+    { value: 'si', label: 'si' }
+  ];
 
   constructor(public formBuilder: FormBuilder, public ticketService: TicketService) {
-    // Form creation
     this.ticketForm = this.formBuilder.group({
       title: [''],
       description: [''],
-      major:['']
+      major: ['']
     });
-    // You can also add validators to your inputs such as required, maxlength or even create your own validator!
-    // More information: https://angular.io/guide/reactive-forms#simple-form-validation
-    // Advanced validation: https://angular.io/guide/form-validation#reactive-form-validation
   }
 
   ngOnInit() {
