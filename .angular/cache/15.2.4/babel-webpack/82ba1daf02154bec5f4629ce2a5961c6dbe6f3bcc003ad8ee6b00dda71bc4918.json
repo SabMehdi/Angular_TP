@@ -1,1 +1,0 @@
-{"ast":null,"code":"export var Major = /*#__PURE__*/(() => {\n  (function (Major) {\n    Major[\"si\"] = \"si\";\n    Major[\"gb\"] = \"gb\";\n    Major[\"ge\"] = \"ge\";\n  })(Major || (Major = {}));\n  return Major;\n})();","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
