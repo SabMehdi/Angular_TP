@@ -22,7 +22,7 @@ export class TicketFormComponent implements OnInit {
     this.ticketForm = this.formBuilder.group({
       title: [''],
       description: [''],
-      major: ['']
+      major: [''],
     });
   }
 

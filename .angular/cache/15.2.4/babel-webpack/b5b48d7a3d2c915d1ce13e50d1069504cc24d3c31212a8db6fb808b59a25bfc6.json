@@ -1,1 +1,0 @@
-{"ast":null,"code":"var dateToday = new Date();\nexport var TICKETS_MOCKED = [{\n  title: 'SI4 in Morocco',\n  description: '',\n  date: dateToday,\n  author: 'Paul'\n}, {\n  title: 'SI5 in Paris',\n  description: 'Description du voyage',\n  date: dateToday,\n  author: 'Anakin'\n}];","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
