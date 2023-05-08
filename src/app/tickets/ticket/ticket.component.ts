@@ -30,7 +30,7 @@ export class TicketComponent implements OnInit {
 
   @Output()
   ticketHasBeenArchived: EventEmitter<boolean> = new EventEmitter<boolean>();
-  deleteTicket(){
+  archiveTicket(){
     this.ticketHasBeenArchived.emit(true);
     // this.ticket.archived = !this.ticket.archived
   }

@@ -19,12 +19,12 @@
         Major: {{ticket.major}}
       </div>
       <div *ngSwitchDefault>
-        Warning! major value is empty or invalid.
+        Warning! major value is empty or invalid. 
       </div>
     </div>
     <div>
       Archived: {{ticket.archived}}
     </div>
   </div>
-  <button (click)="deleteTicket()">Archive</button>
+  <button (click)="archiveTicket()">{{ ticket.archived? 'Unarchive':'Archive'}}</button>
   </div>

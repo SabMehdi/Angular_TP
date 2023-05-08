@@ -25,7 +25,6 @@ export class TicketListComponent implements OnInit {
   archiveTicket(ticket:Ticket){
      //this.ticketList.splice(this.ticketList.indexOf(ticket),1)
     ticket.archived=!ticket.archived
-    //ticket.student="qsdfsfsd"
   }
   toggleDisplayTicketArchived() {
     this.displayTicketArchived = !this.displayTicketArchived;
