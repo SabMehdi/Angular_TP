@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { TicketService } from '../../../services/ticket/ticket.service';
 import { Ticket } from '../../../models/ticket';
+import { students } from 'src/mocks/students.mock';
 
 @Component({
   selector: 'app-ticket-form',
@@ -32,11 +33,9 @@ export class TicketFormComponent implements OnInit {
   addTicket() {
     const ticketToCreate: Ticket = this.ticketForm.getRawValue() as Ticket;
     ticketToCreate.date = new Date();
-    ticketToCreate.student = 'Me';
+    ticketToCreate.student = null;
     ticketToCreate.archived=false;
     this.ticketService.addTicket(ticketToCreate);
   }
  
-  
-
 }
